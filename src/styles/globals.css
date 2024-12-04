@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2d6ac0 #000000af;
+}
+
+/* For Chrome, Safari, and Opera */
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #00000091;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #006affec;
+  border-radius: 20px;
+  border: 2px solid #000000;
+}
+
+/* Ensure white icons */
+.text-white svg {
+  color: white !important;
+  fill: white !important;
+}
+
+/* Profile Dropdown Animation */
+@keyframes slideInDown {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.profile-dropdown-enter {
+  animation: slideInDown 0.2s ease-out forwards;
+}
+
+/* Hover Effects */
+.hover-scale {
+  transition: transform 0.2s ease-in-out;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+/* Smooth Transitions */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+/* Smooth dropdown animation */
+.dropdown-enter {
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease-in-out;
+}
+
+.dropdown-enter-active {
+  max-height: 500px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dropdown-exit {
+  max-height: 500px;
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.dropdown-exit-active {
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-10px);
+}

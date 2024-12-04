@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>New Subscriber Notification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background: linear-gradient(to right, #2563eb, #7c3aed);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .content {
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+        }
+        .message {
+            padding: 15px;
+            border-left: 4px solid #2563eb;
+            background: white;
+            margin: 15px 0;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🎉 New Subscriber Alert!</h1>
+    </div>
+    
+    <div class="content">
+        <p>Hello {{to_name}},</p>
+        
+        <p>You have a new subscriber for EduManager Pro!</p>
+        
+        <div class="message">
+            <p><strong>Subscriber Email:</strong> {{from_email}}</p>
+            <p><strong>Message:</strong></p>
+            <p>{{message}}</p>
+        </div>
+        
+        <p>Remember to:</p>
+        <ul>
+            <li>Add this email to your notification list</li>
+            <li>Send a welcome message if needed</li>
+            <li>Keep track of your growing subscriber base</li>
+        </ul>
+    </div>
+    
+    <div class="footer">
+        <p>EduManager Pro - School Management System</p>
+        <p>Powered by EmailJS</p>
+    </div>
+</body>
+</html>
